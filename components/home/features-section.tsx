@@ -1,4 +1,5 @@
 import { Brain, BookOpen, Shield, Bell } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 interface FeatureProps {
   icon: React.ReactNode;
@@ -9,11 +10,14 @@ interface FeatureProps {
 
 function Feature({ icon, title, description, color }: FeatureProps) {
   return (
-    <div className="p-6 rounded-lg border border-border bg-gradient-to-br from-card/50 to-card/30 backdrop-blur-sm hover-scale transition-all duration-300">
-      <div className={`mb-4 ${color}`}>{icon}</div>
-      <h3 className="text-xl font-semibold mb-3">{title}</h3>
-      <p className="text-muted-foreground">{description}</p>
-    </div>
+    <motion.div
+      whileHover={{ scale: 1.02, y: -5 }}
+      className="p-8 rounded-xl border-2 border-border bg-gradient-to-br from-card/50 to-card/30 backdrop-blur-sm transition-all duration-300 group"
+    >
+      <div className={`mb-6 ${color} transform transition-transform group-hover:scale-110`}>{icon}</div>
+      <h3 className="text-2xl font-semibold mb-4">{title}</h3>
+      <p className="text-muted-foreground leading-relaxed">{description}</p>
+    </motion.div>
   );
 }
 
