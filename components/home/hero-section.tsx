@@ -6,7 +6,7 @@ export function HeroSection() {
     <section className="pt-32 pb-20 relative overflow-hidden">
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-background to-background" />
-        <div className="absolute inset-0 bg-[conic-gradient(from_0deg_at_50%_50%,hsl(var(--primary))_0deg,transparent_60deg,hsl(var(--secondary))_120deg,transparent_180deg,hsl(var(--accent))_240deg,transparent_300deg)] opacity-20 animate-spin-slow" />
+        <div className="absolute inset-0 bg-[conic-gradient(from_0deg_at_50%_50%,hsl(var(--primary))_0deg,transparent_60deg,hsl(var(--secondary))_120deg,transparent_180deg,hsl(var(--accent))_240deg,transparent_300deg)] opacity-20" />
         <div className="absolute inset-0 grid-pattern" />
       </div>
       <div className="container mx-auto px-4 relative">
