@@ -8,7 +8,7 @@ export default function Home() {
       {/* Hero Section */}
       <nav className="border-b border-border/5 backdrop-blur-sm fixed w-full z-50">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 hover-scale">
             <Shield className="w-6 h-6 text-primary" />
             <span className="font-semibold">Crypto_Horizon</span>
           </div>
@@ -16,26 +16,30 @@ export default function Home() {
             <a href="#features" className="text-sm hover:text-primary transition-colors">Features</a>
             <a href="#community" className="text-sm hover:text-primary transition-colors">Community</a>
             <a href="#testimonials" className="text-sm hover:text-primary transition-colors">Testimonials</a>
-            <Button variant="default" size="sm">Login</Button>
+            <Button variant="default" size="sm" className="glow">Login</Button>
           </div>
         </div>
       </nav>
 
       <section className="pt-32 pb-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-background to-background" />
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-background to-background" />
+          <div className="absolute inset-0 bg-[conic-gradient(from_0deg_at_50%_50%,hsl(var(--primary))_0deg,transparent_60deg,hsl(var(--secondary))_120deg,transparent_180deg,hsl(var(--accent))_240deg,transparent_300deg)] opacity-10" />
+          <div className="absolute inset-0 grid-pattern" />
+        </div>
         <div className="container mx-auto px-4 relative">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent animate-gradient">
+            <h1 className="text-5xl md:text-7xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent animate-gradient leading-tight">
               Empowering Your Crypto Journey: Stay Safe, Stay Smart
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8">
               At Crypto_Horizon, we provide cutting-edge tools to help you navigate the complexities of cryptocurrency with confidence, security, and knowledge.
             </p>
             <div className="flex gap-4 justify-center">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground glow hover-scale">
                 Join the Revolution
               </Button>
-              <Button size="lg" variant="outline">
+              <Button size="lg" variant="outline" className="hover-scale">
                 Explore Features
               </Button>
             </div>
@@ -44,7 +48,8 @@ export default function Home() {
       </section>
 
       {/* Mission Statement */}
-      <section className="py-20 bg-background/50" id="mission">
+      <section className="py-20 relative" id="mission">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--primary)/0.1),hsl(var(--secondary)/0.1))]" />
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
@@ -58,7 +63,7 @@ export default function Home() {
       {/* Core Features */}
       <section className="py-20" id="features">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Core Features</h2>
+          <h2 className="text-4xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">Core Features</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Feature
               icon={<Brain className="w-12 h-12" />}
@@ -89,7 +94,8 @@ export default function Home() {
       </section>
 
       {/* Stats */}
-      <section className="py-20 bg-background/50">
+      <section className="py-20 relative">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,hsl(var(--primary)/0.1),transparent_70%)]" />
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <Stat number="100K+" label="Active Users" />
@@ -125,7 +131,8 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-background/50">
+      <section className="py-20 relative">
+        <div className="absolute inset-0 bg-[conic-gradient(from_180deg_at_50%_50%,hsl(var(--secondary)/0.1)_0deg,transparent_60deg,hsl(var(--primary)/0.1)_120deg,transparent_180deg,hsl(var(--accent)/0.1)_240deg,transparent_300deg)]" />
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">Become Part of the Crypto_Horizon Community</h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
@@ -143,7 +150,8 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 border-t border-border/10">
+      <footer className="py-12 border-t border-border/10 relative">
+        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,transparent,hsl(var(--primary)/0.05))]" />
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
@@ -191,7 +199,7 @@ export default function Home() {
 
 function Feature({ icon, title, description, color }: { icon: React.ReactNode; title: string; description: string; color: string }) {
   return (
-    <div className="p-6 rounded-lg border border-border bg-card/50 backdrop-blur-sm">
+    <div className="p-6 rounded-lg border border-border bg-gradient-to-br from-card/50 to-card/30 backdrop-blur-sm hover-scale transition-all duration-300">
       <div className={`mb-4 ${color}`}>{icon}</div>
       <h3 className="text-xl font-semibold mb-3">{title}</h3>
       <p className="text-muted-foreground">{description}</p>
@@ -212,7 +220,7 @@ function Stat({ number, label }: { number: string; label: string }) {
 
 function Testimonial({ content, author, title }: { content: string; author: string; title: string }) {
   return (
-    <div className="p-6 rounded-lg border border-border bg-card/50 backdrop-blur-sm">
+    <div className="p-6 rounded-lg border border-border bg-gradient-to-br from-card/50 to-card/30 backdrop-blur-sm hover-scale transition-all duration-300">
       <p className="mb-4 text-muted-foreground">{content}</p>
       <div>
         <div className="font-semibold">{author}</div>
