@@ -115,7 +115,12 @@
   transform: scale(1.02);
 }
 
-.grid-pattern {
-  background-image: radial-gradient(circle at 1px 1px, hsl(var(--primary) / 0.15) 1px, transparent 0);
-  background-size: 40px 40px;
+.grid-pattern::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 1px 1px, hsl(var(--primary) / 0.08) 1px, transparent 0);
+  background-size: 50px 50px;
+  filter: blur(1px);
+  opacity: 0.5;
 }
