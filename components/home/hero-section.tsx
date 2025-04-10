@@ -1,8 +1,5 @@
-'use client';
-
 import { Shield } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { motion } from 'framer-motion';
 
 export function HeroSection() {
   return (
@@ -14,11 +11,7 @@ export function HeroSection() {
       </div>
       <div className="container mx-auto px-4 relative">
         <div className="text-center max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
+          <div>
             <h1 className="text-5xl md:text-7xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent animate-gradient leading-tight">
               Empowering Your Crypto Journey: Stay Safe, Stay Smart
             </h1>
@@ -26,18 +19,14 @@ export function HeroSection() {
               At Crypto_Horizon, we provide cutting-edge tools to help you navigate the complexities of cryptocurrency with confidence, security, and knowledge.
             </p>
             <div className="flex gap-4 justify-center">
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground glow">
-                  Join the Revolution
-                </Button>
-              </motion.div>
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Button size="lg" variant="outline" className="border-2">
-                  Explore Features
-                </Button>
-              </motion.div>
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground glow">
+                Join the Revolution
+              </Button>
+              <Button size="lg" variant="outline" className="border-2">
+                Explore Features
+              </Button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
