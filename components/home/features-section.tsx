@@ -1,3 +1,5 @@
+'use client';
+
 import { Brain, BookOpen, Shield, Bell } from 'lucide-react';
 import { motion } from 'framer-motion';
 
